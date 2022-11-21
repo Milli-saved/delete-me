@@ -18,9 +18,10 @@ exports.validate = (type) => {
           .not()
           .isEmpty()
           .withMessage("Creator can not be empty."),
-        body("status").not().isEmpty().withMessage("Status is required."),
-        body("batch_id").not().isEmpty().withMessage("Box ID is required."),
+        body("vendor_id").not().isEmpty().withMessage("Status is required."),
+        body("status").not().isEmpty().withMessage("Box ID is required."),
         body("store_id").not().isEmpty().withMessage("Store ID is required."),
+        body("batch_id").not().isEmpty().withMessage("Batch id is required.")
       ];
     default:
       return [];

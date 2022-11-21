@@ -8,6 +8,6 @@ router.param("id", batchController.params);
 
 router
   .get("/getallbatches", verifyUser, batchController.getAllBatch)
-  .post("/addnewbatch", batchController.createNewBatch);
+  .post("/addnewbatch", verifyUser, batchController.createNewBatch);
 
 module.exports = router;
