@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const { validationResult } = require("express-validator");
 
 const getToken = (id) => {
-  return jwt.sign({ id }, "websprix", {
+  return jwt.sign({ id }, "danenergy", {
     expiresIn: "1h",
   });
 };
